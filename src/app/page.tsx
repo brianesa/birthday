@@ -67,8 +67,10 @@ export default function Home() {
   function handlOpenModal(open: boolean) {
     toggle(open);
   }
+  const [audio, setAudio] = useState<HTMLAudioElement>();
 
   useEffect(() => {
+    setAudio(new Audio("/hbd.mp3"));
     setTimeout(() => {
       animateScroll.scrollToBottom();
     }, 4000);
@@ -86,7 +88,6 @@ export default function Home() {
       animateScroll.scrollToBottom();
     }, 21000);
   }, []);
-  const audio = new Audio("/hbd.mp3");
   const [play, setPlay] = useState(false);
   return (
     <main className={styles.main}>
@@ -95,7 +96,7 @@ export default function Home() {
           src="/play.png"
           style={{ width: "50%", height: "50%" }}
           onClick={() => {
-            audio.play();
+            audio?.play();
             setPlay(true);
           }}
           alt="play"
