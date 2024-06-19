@@ -129,7 +129,6 @@ export default function Home() {
                     style={{
                       width: 150,
                       height: 200,
-                      backgroundColor: "blue",
                       objectFit: "cover",
                     }}
                   />
@@ -163,7 +162,6 @@ export default function Home() {
                     style={{
                       width: 150,
                       height: 200,
-                      backgroundColor: "blue",
                       objectFit: "cover",
                     }}
                   />
@@ -209,7 +207,6 @@ export default function Home() {
                         style={{
                           width: 150,
                           height: 200,
-                          backgroundColor: "blue",
                           objectFit: "cover",
                         }}
                       />
@@ -254,7 +251,6 @@ export default function Home() {
                   style={{
                     width: "100%",
                     height: "100%",
-                    backgroundColor: "blue",
                     objectFit: "contain",
                   }}
                 />
