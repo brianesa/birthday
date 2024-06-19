@@ -39,7 +39,7 @@ const containerVariant = {
   isOpen: { top: "50%" },
   exit: { top: "-50%" },
 };
-const Modal = ({ handleClose, children, isOpen }) => {
+const Modal = ({ handleClose, children, isOpen }: any) => {
   return (
     <AnimatePresence>
       {isOpen && (
