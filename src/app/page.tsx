@@ -68,27 +68,29 @@ export default function Home() {
     toggle(open);
   }
   const [audio, setAudio] = useState<HTMLAudioElement>();
+  const [play, setPlay] = useState(false);
 
   useEffect(() => {
     setAudio(new Audio("/hbd.mp3"));
-    setTimeout(() => {
-      animateScroll.scrollToBottom();
-    }, 4000);
-    setTimeout(() => {
-      animateScroll.scrollToBottom();
-    }, 9000);
+    if (play) {
+      setTimeout(() => {
+        animateScroll.scrollToBottom();
+      }, 4000);
+      setTimeout(() => {
+        animateScroll.scrollToBottom();
+      }, 9000);
 
-    setTimeout(() => {
-      animateScroll.scrollToTop();
-    }, 12000);
-    setTimeout(() => {
-      animateScroll.scrollToBottom();
-    }, 16500);
-    setTimeout(() => {
-      animateScroll.scrollToBottom();
-    }, 21000);
-  }, []);
-  const [play, setPlay] = useState(false);
+      setTimeout(() => {
+        animateScroll.scrollToTop();
+      }, 12000);
+      setTimeout(() => {
+        animateScroll.scrollToBottom();
+      }, 16500);
+      setTimeout(() => {
+        animateScroll.scrollToBottom();
+      }, 21000);
+    }
+  }, [play]);
   return (
     <main className={styles.main}>
       {!play ? (
